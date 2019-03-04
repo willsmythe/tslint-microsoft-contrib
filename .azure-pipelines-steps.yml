@@ -26,3 +26,6 @@ steps:
     npm install -g mocha-junit-reporter
     npm run test   
     displayName: 'Run tests'
+    env:
+      NPM_CONFIG_MOCHA_REPORTER: mocha-junit-reporter
+
