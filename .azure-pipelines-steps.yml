@@ -28,5 +28,4 @@ steps:
     env:
       NPM_CONFIG_MOCHA_REPORTER: mocha-junit-reporter
     displayName: 'Run tests'
-    condition: not(variables.SKIP_TESTS)
 
