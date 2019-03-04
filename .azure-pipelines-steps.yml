@@ -22,11 +22,7 @@ steps:
     displayName: 'Install dependencies (npm install)'
     condition: variables.NPM_INSTALL
 
-<<<<<<< HEAD
   - script: npm run test-ci
-=======
-  - script: npm run test
->>>>>>> parent of 3cb28df... adding test script
     displayName: 'Run tests'
     condition: not(variables.SKIP_TESTS)
 
