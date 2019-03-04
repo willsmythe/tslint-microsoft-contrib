@@ -1,5 +1,5 @@
 #
-# Steps for building and testing tslint-microsoft-contrib. See jobs defined in .azure-pipelines.yml.
+# Steps for building and testing tslint. See jobs defined in .azure-pipelines.yml.
 #
 
 steps:
@@ -22,11 +22,5 @@ steps:
     displayName: 'Install dependencies (npm install)'
     condition: variables.NPM_INSTALL
 
-  - script: npm run test-ci
+  - script: npm install -g mocha-junit-reporter 
     displayName: 'Run tests'
-    condition: not(variables.SKIP_TESTS)
-
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFiles: './test-results.xml'
-    displayName: 'Publishing test results'
