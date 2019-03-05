@@ -27,7 +27,7 @@ steps:
       npm run test 
     displayName: 'Run tests'
     env:
-      MOCHA_EXTRA_OPTS: --reporter mocha-junit-reporter --reporter-options "mochaFile=./test-results.xml"
+      MOCHA_EXTRA_OPTS: --reporter mocha-junit-reporter -reporter-options mochaFile=./test-results.xml
 
 
   - task: PublishTestResults@2
