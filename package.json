@@ -74,9 +74,6 @@
     "watch:run-tests": "node build-tasks/watch-run-tests.js",
     "watch:src": "tsc --watch"
   },
-  "config": {
-        "mocha_reporter": "spec"
-  },
   "dependencies": {
     "tsutils": "^2.27.2 <2.29.0"
   },
