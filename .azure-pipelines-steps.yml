@@ -33,6 +33,6 @@ steps:
   - task: PublishTestResults@2
     inputs:
       testResultsFiles: 'test-results.xml'
-      testRunTitle: $(job)
+      testRunTitle: $(TEST_TITLE)
     displayName: 'Publishing test results'
 
