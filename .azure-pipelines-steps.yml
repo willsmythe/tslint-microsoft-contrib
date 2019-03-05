@@ -28,7 +28,7 @@ steps:
     displayName: 'Run tests'
     env:
       REPORTER: --reporter
-      MOCHA_EXTRA_OPTS: mocha-junit-reporter
+      MOCHA_EXTRA_OPTS: mocha-junit-reporter-bleh
 
   - task: PublishTestResults@2
     inputs:
