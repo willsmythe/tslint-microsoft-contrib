@@ -22,11 +22,11 @@ steps:
     displayName: 'Install dependencies (npm install)'
     condition: variables.NPM_INSTALL
 
-  - script: |
-    npm install -g mocha-junit-reporter
-    npm run test
+  - script: npm install -g mocha-junit-reporter
+    displayName: 'Install reporter'
+
+  - script: npm run test
     displayName: 'Run tests'
-    condition: not(variables.SKIP_TESTS)
 
   - task: PublishTestResults@2
     inputs:
