@@ -28,7 +28,8 @@ steps:
       ls -R -Inode_modules
     displayName: 'Run tests'
     env:
-      MOCHA_EXTRA_OPTS: --reporter mocha-junit-reporter
+      REPORTER: --reporter
+      MOCHA_EXTRA_OPTS: mocha-junit-reporter
 
 
   - task: PublishTestResults@2
