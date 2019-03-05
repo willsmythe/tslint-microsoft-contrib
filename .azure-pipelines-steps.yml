@@ -25,10 +25,8 @@ steps:
   - script: npm install -g mocha-junit-reporter
     displayName: 'Install reporter'
 
-  - bash: npm run test
+  - script: npm run test -- --reporter mocha-junit-reporter
     displayName: 'Run tests'
-    env:
-      NPM_CONFIG_MOCHA_REPORTER: mocha-junit-reporter
 
   - task: PublishTestResults@2
     inputs:
