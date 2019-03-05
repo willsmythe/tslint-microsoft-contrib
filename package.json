@@ -47,9 +47,6 @@
       "git add"
     ]
   },
-  "config": {
-    "mocha_reporter": "spec"
-  },
   "scripts": {
     "clean": "rimraf dist",
     "copy:config-json": "node build-tasks/copy-config-json.js",
@@ -78,6 +75,7 @@
     "watch:src": "tsc --watch"
   },
   "dependencies": {
+    "cross-var": "^1.1.0",
     "tsutils": "^2.27.2 <2.29.0"
   },
   "devDependencies": {
