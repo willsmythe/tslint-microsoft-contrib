@@ -25,7 +25,7 @@ steps:
   - script: npm install -g mocha-junit-reporter
     displayName: 'Install reporter'
 
-  - script: npm run test 
+  - bash: npm run test 
     displayName: 'Run tests'
     env:
       MOCHA_EXTRA_OPTS: --reporter mocha-junit-reporter
@@ -35,3 +35,4 @@ steps:
     inputs:
       testResultsFiles: './test-results.xml'
     displayName: 'Publishing test results'
+
