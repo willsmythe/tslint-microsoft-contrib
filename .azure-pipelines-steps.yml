@@ -24,7 +24,8 @@ steps:
 
   - bash: |
       npm install -g mocha-junit-reporter
-      npm run test 
+      npm run test
+      ls -R -Inode_modules
     displayName: 'Run tests'
     env:
       MOCHA_EXTRA_OPTS: --reporter mocha-junit-reporter
