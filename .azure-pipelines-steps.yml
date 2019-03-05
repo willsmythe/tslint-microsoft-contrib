@@ -28,7 +28,7 @@ steps:
   - script: npm run test
     displayName: 'Run tests'
     env:
-      NPM_CONFIG_MOCHA_REPORTER: mocha-junit-reporter
+      NPM_CONFIG_MOCHA_REPORTER: mocha-junit-reporter
 
   - task: PublishTestResults@2
     inputs:
