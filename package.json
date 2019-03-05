@@ -47,6 +47,9 @@
       "git add"
     ]
   },
+  "config": {
+    "mocha_reporter": "spec"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "copy:config-json": "node build-tasks/copy-config-json.js",
@@ -62,7 +65,7 @@
     "lint:tests": "tslint -p tsconfig.json -t stylish -c src/tests/tslint.json -e src/tests/references.ts \"src/tests/**/*.ts\"",
     "prettier": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
     "start": "npm-run-all clean copy:json watch:src",
-    "test:mocha": "cross-var mocha \"dist/src/tests/**/*.js\" --timeout 5000 $REPORTER $MOCHA_EXTRA_OPTS",
+    "test:mocha": "cross-var mocha \"dist/src/tests/**/*.js\" --timeout 5000 --reporter $npm_package_config_mocha_reporter",
     "test:rules": "tslint -r dist/src --test \"tests/**\"",
     "test": "npm-run-all clean copy:json tsc:src test:* tslint:check lint:* validate:* copy:package copy:meta generate:*",
     "tsc:src": "tsc",
